@@ -24,7 +24,6 @@ import argparse
 import gzip
 import os
 import sys
-import Image
 import glob
 import subprocess
 import tempfile
@@ -83,9 +82,11 @@ CCD_WIDTHS = {
      "Canon Canon EOS 5D"                        : 35.8,
      "Canon Canon EOS 5D Mark II"                : 36.0,
      "Canon Canon EOS 5D Mark III"               : 36.0,
+     "Canon EOS DIGITAL REBEL"                   : 22.66,
      "Canon Canon EOS DIGITAL REBEL"             : 22.66,
      "Canon Canon EOS DIGITAL REBEL XT"          : 22.2,
      "Canon Canon EOS DIGITAL REBEL XTi"         : 22.2,
+     "Canon Canon EOS REBEL T5i"                 : 22.3,
      "Canon Canon EOS Kiss Digital"              : 22.66,
      "Canon Canon IXY DIGITAL 600"               : 7.176,  # 1/1.8"
      "Canon Canon PowerShot A20"                 : 7.176,  # 1/1.8"
@@ -145,7 +146,6 @@ CCD_WIDTHS = {
      "Canon Canon PowerShot SD800 IS"            : 5.76,   # 1/2.5"
      "Canon Canon PowerShot SX500 IS"            : 6.17,   # 1/2.3"
      "Canon EOS 300D DIGITAL"                    : 22.66,
-     "Canon EOS DIGITAL REBEL"                   : 22.66,
      "Canon PowerShot A510"                      : 5.76,   # 1/2.5" ???
      "Canon PowerShot S30"                       : 7.176,  # 1/1.8"
      "CASIO COMPUTER CO.,LTD. EX-S500"           : 5.76,   # 1/2.5"
@@ -328,6 +328,8 @@ CCD_WIDTHS = {
      "SONY DSC-W5"                               : 7.176,  # 1/1.8"
      "SONY DSC-W7"                               : 7.176,  # 1/1.8"
      "SONY DSC-W80"                              : 5.75,   # 1/2.5"
+     "SONY DSLR-A700"                            : 23.5,   # 23.5 x 15.6mm
+     "SONY SLT-A99V"                             : 35.8,   # 35.8 x 23.9mm
 }
 
 def get_images():
